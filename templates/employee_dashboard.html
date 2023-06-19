@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+Employee Dashboard
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h2 class="text-center">Employee Dashboard</h2>
+    <table class="table mt-4">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Phone</th>
+          <th>Service</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for order in orders %}
+          <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.name }}</td>
+            <td>{{ order.surname }}</td>
+            <td>{{ order.phone }}</td>
+            <td>{{ order.service }}</td>
+            <td>
+              <button class="btn btn-primary">Make an order</button>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
