@@ -283,4 +283,4 @@ class MyApp:
 
 if __name__ == '__main__':
     my_app = MyApp()
-    my_app.app.run(debug=False,host='0.0.0.0', port=8080)
+    my_app.app.run(debug=False,host='0.0.0.0', port=3000)
